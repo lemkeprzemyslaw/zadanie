@@ -29,14 +29,15 @@ nav {
     align-items: center;
     color: #ffffff;
     transition: 0.6s;
-    z-index: 100;
+    z-index: 10;
+    width: 100%;
 }
 
 .flex, .menu-item, .second-menu-item, .header-text, .fruits-images {
     display: flex;
 }
 
-nav, a, .menu-item, .second-menu-item {
+nav, a {
     width: 100%;
 }
 
@@ -51,7 +52,7 @@ nav, a, .menu-item, .second-menu-item {
     padding-right: 15px;
 }
 
-.menu-button:hover {
+.menu-button:hover, .menu-item:hover {
     cursor: pointer;
 }
 
@@ -90,9 +91,9 @@ a {
 .menu-list {
     position: absolute;
     top: 100%;
-    left: 50%;
+    right: -50%;
     transform: translate(-50%, 0);
-    width: 100vw;
+    width: 100%;
 }
 
 .menu-item, .second-menu-item, .header-text, .fruits-images {
@@ -109,8 +110,7 @@ a {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.menu-item:hover, .menu-item:focus, .second-menu-item:hover, .second-menu-item:focus  {
-    text-underline: #ffffff;
+.menu-item:hover, .second-menu-item:hover {
     background-color: rgba(0, 0, 0, 0.75);
 }
 
@@ -172,8 +172,9 @@ img {
 hr {
     width: 200px;
     border: 0;
-    height: 0.5px;
+    height: 1px;
     background: #ff4242;
+    margin: 15px auto;
 }
 
 #about > h1, .submit, .copyright, .logo-container {
@@ -201,8 +202,26 @@ table {
     margin: 5px;
 }
 
-#types > .flex, .fruits-gallery, .column, .header-text {
+.fruits-gallery, .column, .header-text {
     flex-direction: column;
+}
+
+#types {
+    flex-wrap: wrap;
+}
+
+.type-image, .type-description {
+    width: 100%;
+}
+
+.type-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
 }
 
 #types > h1 {
@@ -233,7 +252,7 @@ table {
 }
 
 #about, #types, #gallery {
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 footer {
@@ -273,6 +292,11 @@ footer {
     width: 100%;
 }
 
+#about {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .logo-container {
     padding: 15px 20px 15px 15px;
     align-items: center;
@@ -293,7 +317,7 @@ input {
 }
 
 .email {
-    width: 65%;
+    width: 68%;
     background-color: #e1e1e1;
     border-width: 0;
     border-bottom: 1px solid #585858;
@@ -326,6 +350,14 @@ input {
         width: 50%;
     }
 
+    #cherry, #apple {
+        flex-direction: row;
+    }
+
+    #gean, #strawberry {
+        flex-direction: row-reverse;
+    }
+
     #gallery {
         display: flex;
     }
@@ -340,9 +372,16 @@ input {
         max-width: 970px;
     }
 
-
     .gallery-container {
         width: 50%;
+    }
+
+    #cherry, #apple {
+        flex-direction: row;
+    }
+
+    #gean, #strawberry {
+        flex-direction: row-reverse;
     }
 
     #gallery {
@@ -351,6 +390,38 @@ input {
 
     .first-gallery {
         margin-right: 15px;
+    }
+
+    .header-text > h1 {
+        font-size: 56px;
+    }
+
+    .header-text > h2 {
+        font-size: 40px;
+    }
+
+    .fruits-gallery > h3
+    {
+        font-size: 30px;
+    }
+
+    .fruits-gallery > p
+    {
+        font-size: 17px;
+    }
+
+    table, tr, th, td {
+        font-size: 25px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    p {
+        line-height: 1.6;
+        font-size: 22px;
     }
 }
 
@@ -363,6 +434,14 @@ input {
         width: 50%;
     }
 
+    #cherry, #apple {
+        flex-direction: row;
+    }
+
+    #gean, #strawberry {
+        flex-direction: row-reverse;
+    }
+
     #gallery {
         display: flex;
     }
@@ -370,4 +449,61 @@ input {
     .first-gallery {
         margin-right: 15px;
     }
+
+    .menu-button {
+        display: none;
+    }
+
+    .menu-list {
+        display: flex;
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: none;
+        width: 600px;
+    }
+
+    .menu-item {
+        padding: 0 10px;
+        background: none;
+    }
+
+    table, tr, th, td {
+        font-size: 25px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        line-height: 1.6;
+        font-size: 26px;
+    }
+
+    .type-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-text > h1 {
+        font-size: 76px;
+    }
+
+    .header-text > h2 {
+        font-size: 50px;
+    }
+
+    .fruits-gallery > h3
+     {
+        font-size: 30px;
+    }
+
+    .fruits-gallery > p
+    {
+        font-size: 17px;
+    }
+
 }
