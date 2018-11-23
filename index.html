@@ -10,7 +10,7 @@
     <title>Owoce polskie i egzotyczne</title>
 </head>
 <body>
-<nav>
+<nav class="flex">
     <div class="logo"><img src="img/logo-gruszka-ugryziona.png" alt=""></div>
     <div>
         <div class="menu-button">
@@ -45,13 +45,15 @@
         </div>
     </div>
 </nav>
-<div class="main-container">
-    <div class="header">
+<div class="header">
+    <div class="main-container">
         <div class="header-text">
             <h1>OWOCE POLSKIE I EGZOTYCZNE</h1>
             <h2>Najzdrowsze, najlepsze i najsmaczniejsze</h2>
         </div>
     </div>
+</div>
+<div class="main-container">
     <div id="about">
         <h1>Owoce i ich odmiany</h1>
         <hr>
@@ -165,8 +167,8 @@
         </table>
     </div>
     <div id="gallery">
-        <div class="flex">
-            <div class="fruits-gallery right-margin">
+        <div class="flex gallery-container first-gallery">
+            <div class="fruits-gallery right-margin flex">
                 <h3>Wiśnie</h3>
                 <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
                     lorem Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem Lorem ipsum lorem ipsum lorem ipsum
@@ -174,7 +176,7 @@
                     ipsum lorem</p>
                 <img src="img/wisnie-czerwone.jpg" alt="">
             </div>
-            <div class="fruits-gallery">
+            <div class="fruits-gallery flex">
                 <h3>Czereśnie</h3>
                 <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
                     lorem Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem Lorem ipsum lorem ipsum lorem ipsum
@@ -183,8 +185,8 @@
                 <img src="img/czeresnie-w-misce.jpg" alt="">
             </div>
         </div>
-        <div class="flex">
-            <div class="fruits-gallery right-margin">
+        <div class="flex gallery-container">
+            <div class="fruits-gallery right-margin flex">
                 <h3>Jabłka</h3>
                 <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
                     lorem Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem Lorem ipsum lorem ipsum lorem ipsum
@@ -192,7 +194,7 @@
                     ipsum lorem</p>
                 <img src="img/jablka-zielone.jpg" alt="">
             </div>
-            <div class="fruits-gallery">
+            <div class="fruits-gallery flex">
                 <h3>Truskawki</h3>
                 <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
                     lorem Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem Lorem ipsum lorem ipsum lorem ipsum
@@ -203,8 +205,8 @@
         </div>
     </div>
 </div>
-<footer>
-    <div class="flex-footer">
+    <footer>
+        <div class="main-container flex footer-container">
         <div class="flex-column">
             <div class="footer-item"><a href="#about">O OWOCACH</a></div>
             <div class="footer-item"><a href="#types">RODZAJE</a></div>
@@ -224,12 +226,13 @@
                 <input class="submit" type="submit" value="Wyślij">
             </div>
         </div>
-        <div class="flex-column logo-container">
+        <div class="flex logo-container">
             <img src="img/logo-gruszka-ugryziona.png" alt="Logo firmy">
         </div>
-    </div>
-    <div class="copyright">Copyright FruitStandMan</div>
-</footer>
+        <div class="copyright">Copyright FruitStandMan</div>
+        </div>
+    </footer>
+
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/menu.js"></script>
 </body>
