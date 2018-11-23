@@ -1,0 +1,332 @@
+body {
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    font-weight: lighter;
+}
+
+p {
+    line-height: 1.6;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    transition: 0.6s;
+    z-index: 100;
+}
+
+.small-nav {
+    transition: 0.6s;
+    height: 50px;
+}
+
+.menu-button {
+    font-size: 20px;
+    font-weight: 800;
+    padding-right: 15px;
+}
+
+.menu-button:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    width: 100%;
+    height: 50px;
+}
+
+.menu-icon {
+    width: 20px;
+    height: 3px;
+    background-color: #ffffff;
+    position: relative;
+    top: 11px;
+    right: 22px;
+}
+
+.menu-icon:before, .menu-icon:after {
+    width: 20px;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    content: ' ';
+}
+
+.menu-icon:before {
+    top: 6px;
+}
+
+.menu-icon:after {
+    bottom: 6px;
+}
+
+.menu-list {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100vw;
+    transition: 0.3s;
+}
+
+.menu-item, .second-menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+}
+
+.second-menu-item {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.menu-item:hover, .menu-item:focus, .second-menu-item:hover, .second-menu-item:focus  {
+    text-underline: #ffffff;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.hide {
+    display: none;
+}
+
+.logo {
+    height: 45px;
+    padding-left: 10px;
+}
+
+.logo > img {
+    height: 100%;
+}
+
+.header-text > h1, .header-text > h2 {
+    text-shadow: 1px 1px #000000;
+    padding: 10px;
+}
+
+.header-text > h1 {
+    font-size: 35px;
+}
+
+.header-text > h2 {
+    font-size: 20px;
+}
+
+.main-container {
+    width: 100%;
+}
+
+.header {
+    background-image: url("/zadanie/img/mix-owocow-w-koszyku.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.header-text {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.18);
+}
+
+.fruits-images {
+    display: flex;
+}
+
+.fruits-images > div {
+    width: 50%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.right-margin {
+    margin-right: 15px;
+}
+
+hr {
+    width: 200px;
+    border: 0;
+    height: 0.5px;
+    background: #ff4242;
+}
+
+.type-description > h1 {
+    padding: 15px;
+    font-size: 20px;
+}
+
+.type-description > p {
+    padding: 15px;
+    font-size: 16px;
+}
+
+#about > h1 {
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+}
+
+#about > p {
+    text-align: justify;
+    padding: 15px;
+    font-size: 16px;
+}
+
+table, tr, th, td {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    font-size: 14px;
+    padding: 3px;
+}
+
+th {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+table {
+    margin: 5px;
+}
+
+.flex, .fruits-gallery {
+    display: flex;
+}
+
+.flex > div {
+    width: 100%;
+}
+
+#types > .flex {
+    flex-direction: column;
+}
+
+#types > h1 {
+    padding: 15px;
+    font-size: 16px;
+}
+
+.fruits-gallery {
+    width: 50%;
+    flex-direction: column;
+}
+
+.fruits-gallery > h3 {
+    position: relative;
+    display: inline;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.fruits-gallery > h3::after {
+    height: 1px;
+    background: #ff4242;
+    content: '  ';
+    position: absolute;
+    display: inline;
+    bottom: 0;
+    left: 10px;
+    width: 66%;
+}
+
+.fruits-gallery > p {
+    font-size: 14px;
+    padding: 10px;
+}
+
+#about, #types, #gallery {
+    padding: 10px 0;
+}
+
+footer {
+    background-color: #e1e1e1;
+}
+
+.flex-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1
+}
+
+.footer-item>a {
+    color: black;
+    font-weight: lighter;
+}
+
+.footer-item {
+    padding: 15px 15px 0 15px;
+}
+
+.footer-item:last-child {
+    padding: 15px;
+}
+
+#contact {
+    flex-grow: 2;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    padding: 15px 20px 15px 15px;
+}
+
+.logo-container>img {
+    max-height: 80px;
+    margin: 0 auto;
+}
+
+input, label {
+    padding: 5px 0;
+}
+
+input {
+    display: inline;
+}
+
+.email {
+    width: 65%;
+    background-color: #e1e1e1;
+    border-width: 0;
+    border-bottom: 1px solid #585858;
+}
+
+.submit {
+    width: 30%;
+    background-color: #e1e1e1;
+    border: 1px solid #585858;
+    text-align: center;
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+    padding: 5px;
+}
+
