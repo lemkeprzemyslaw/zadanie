@@ -33,11 +33,11 @@ nav {
     width: 100%;
 }
 
-.flex, .menu-item, .second-menu-item, .header-text, .fruits-images {
+a, .flex, .menu-item, .second-menu-item, .header-text, .fruits-images {
     display: flex;
 }
 
-nav, a {
+nav {
     width: 100%;
 }
 
@@ -60,7 +60,12 @@ a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-    height: 50px;
+    display: block;
+}
+
+.types {
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .menu-icon {
@@ -94,6 +99,7 @@ a {
     right: -50%;
     transform: translate(-50%, 0);
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .menu-item, .second-menu-item, .header-text, .fruits-images {
@@ -102,12 +108,7 @@ a {
 }
 
 .menu-item, .second-menu-item {
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.second-menu-item {
-    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
 }
 
 .menu-item:hover, .second-menu-item:hover {
@@ -118,13 +119,9 @@ a {
     display: none;
 }
 
-.logo {
+a > img {
     height: 45px;
     padding-left: 10px;
-}
-
-.logo > img {
-    height: 100%;
 }
 
 h1, h2, p, #contact {
@@ -154,7 +151,7 @@ h1, h2, p, #contact {
     color: white;
     height: 100%;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.18);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .fruits-images > div, .fruits-gallery {
@@ -202,7 +199,7 @@ table {
     margin: 5px;
 }
 
-.fruits-gallery, .column, .header-text {
+.fruits-gallery, .column, .header-text, .types {
     flex-direction: column;
 }
 
@@ -460,12 +457,19 @@ input {
         top: 0;
         right: 0;
         transform: none;
-        width: 600px;
+        width: auto;
+        height: 100%;
+        background: none;
     }
 
     .menu-item {
-        padding: 0 10px;
+        padding: 10px 10px;
         background: none;
+        height: initial;
+    }
+
+    .menu-item > a {
+        height: 100%;
     }
 
     table, tr, th, td {
@@ -504,6 +508,19 @@ input {
     .fruits-gallery > p
     {
         font-size: 17px;
+    }
+
+    .second-menu-list {
+        position: absolute;
+        top: 100%;
+        display: none;
+        right: 0;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    a {
+        display: inline-flex;
     }
 
 }
