@@ -3,7 +3,7 @@ $(".menu-button").click(function (event) {
     $(".menu-list").slideToggle("slow");
 });
 
-$(".types").click(function (event) {
+$(".second-menu").click(function (event) {
     $(".second-menu-list").slideToggle("slow");
     event.stopPropagation();
 });

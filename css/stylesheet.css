@@ -126,6 +126,10 @@ a {
     background-color: rgba(0, 0, 0, 0.75);
 }
 
+.second-menu {
+    cursor: pointer;
+}
+
 .hide {
     display: none;
 }
@@ -155,28 +159,15 @@ h1, h2, p, #contact {
 }
 
 @keyframes slide {
-    0% {
-        bottom: 20%
-    }
-    50% {
-        bottom: 18%
-    }
-    100% {
-        bottom: 20%
-    }
+    0%   {bottom: 20%}
+    50% {bottom: 18%}
+    100%   {bottom: 20%}
 }
 
 @keyframes pulse {
-    0% {
-        background: #dcd3b4;
-    }
-    50% {
-        background: #fff6d4;
-        box-shadow: 0 -3px 2px 2px #fff6d4;
-    }
-    100% {
-        background: #dcd3b4;
-    }
+    0%   {background: #dcd3b4;}
+    50% {background: #fff6d4; box-shadow: 0 -3px 2px 2px #fff6d4;}
+    100%   {background: #dcd3b4;}
 }
 
 .arrow {
@@ -324,7 +315,7 @@ footer {
     flex-grow: 1
 }
 
-.footer-item > a {
+.footer-item>a {
     color: black;
     font-weight: lighter;
 }
@@ -342,6 +333,8 @@ footer {
     flex-wrap: wrap;
     align-content: center;
 }
+
+
 
 .logo-container {
     padding: 15px 20px 15px 15px;
@@ -404,11 +397,13 @@ input {
         font-size: 40px;
     }
 
-    .fruits-gallery > h3 {
+    .fruits-gallery > h3
+    {
         font-size: 30px;
     }
 
-    .fruits-gallery > p {
+    .fruits-gallery > p
+    {
         font-size: 17px;
     }
 
@@ -479,11 +474,13 @@ input {
         font-size: 50px;
     }
 
-    .fruits-gallery > h3 {
+    .fruits-gallery > h3
+     {
         font-size: 30px;
     }
 
-    .fruits-gallery > p {
+    .fruits-gallery > p
+    {
         font-size: 17px;
     }
 
@@ -503,6 +500,10 @@ input {
     .second-menu-list > a {
         float: right;
         height: 30px;
+    }
+
+    .menu-list > a, .second-menu-list > a {
+        height: 100%;
     }
 
     .first-line, .second-line {
