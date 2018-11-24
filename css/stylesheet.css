@@ -171,7 +171,7 @@ h1, h2, p, #contact {
 
 @keyframes pulse {
     0%   {background: #dcd3b4;}
-    50% {background: #fff6d4; box-shadow: 0px 0px 2px 2px #fff6d4;}
+    50% {background: #fff6d4; box-shadow: 0 -3px 2px 2px #fff6d4;}
     100%   {background: #dcd3b4;}
 }
 
