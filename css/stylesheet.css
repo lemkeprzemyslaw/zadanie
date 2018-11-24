@@ -21,6 +21,26 @@ h2, .menu-button, .menu-item {
     font-size: 20px;
 }
 
+hr {
+    width: 200px;
+    border: 0;
+    height: 1px;
+    background: #ff4242;
+    margin: 15px auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+a, .flex {
+    display: flex;
+}
+
+#about, #types, #gallery, footer {
+    padding: 20px 0;
+}
+
 nav {
     height: 75px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -31,10 +51,6 @@ nav {
     transition: 0.6s;
     z-index: 10;
     width: 100%;
-}
-
-a, .flex, .fruits-images {
-    display: flex;
 }
 
 .small-nav {
@@ -119,9 +135,6 @@ a {
     display: none;
 }
 
-a > img {
-}
-
 h1, h2, p, #contact {
     padding: 15px;
 }
@@ -146,22 +159,6 @@ h1, h2, p, #contact {
     text-shadow: 1px 1px #000000;
 }
 
-.first-line, .second-line {
-    width: 30px;
-    right: 50%;
-    position: absolute;
-    transform: translateX(50%);
-    bottom: 20%;
-}
-
-.arrow {
-    position: absolute;
-    right: 50%;
-    bottom: 20%;
-    animation: slide 2s infinite;
-    height: 50px;
-}
-
 @keyframes slide {
     0%   {bottom: 20%}
     50% {bottom: 18%}
@@ -172,6 +169,22 @@ h1, h2, p, #contact {
     0%   {background: #dcd3b4;}
     50% {background: #fff6d4; box-shadow: 0 -3px 2px 2px #fff6d4;}
     100%   {background: #dcd3b4;}
+}
+
+.arrow {
+    position: absolute;
+    right: 50%;
+    bottom: 20%;
+    animation: slide 2s infinite;
+    height: 50px;
+}
+
+.first-line, .second-line {
+    width: 30px;
+    right: 50%;
+    position: absolute;
+    transform: translateX(50%);
+    bottom: 20%;
 }
 
 .first-line {
@@ -206,35 +219,29 @@ h1, h2, p, #contact {
     transform: skewY(-40deg)
 }
 
+#about {
+    width: 80%;
+    margin: 0 auto;
+}
 
+#about > p {
+    text-align: justify;
+}
+
+#about > h1, .submit, .logo-container, .copyright {
+    text-align: center;
+}
 
 .fruits-images > div, .fruits-gallery {
     width: 50%;
-}
-
-img {
-    max-width: 100%;
 }
 
 .right-margin {
     margin-right: 15px;
 }
 
-hr {
-    width: 200px;
-    border: 0;
-    height: 1px;
-    background: #ff4242;
-    margin: 15px auto;
-}
 
-#about > h1, .submit, .copyright, .logo-container {
-    text-align: center;
-}
 
-#about > p {
-    text-align: justify;
-}
 
 table, tr, th, td {
     border: 1px solid #000000;
@@ -302,10 +309,6 @@ table {
     padding: 10px;
 }
 
-#about, #types, #gallery, footer {
-    padding: 20px 0;
-}
-
 footer {
     background-color: #e1e1e1;
 }
@@ -339,10 +342,7 @@ footer {
     align-content: center;
 }
 
-#about {
-    width: 80%;
-    margin: 0 auto;
-}
+
 
 .logo-container {
     padding: 15px 20px 15px 15px;
