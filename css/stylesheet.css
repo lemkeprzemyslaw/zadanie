@@ -8,7 +8,7 @@ body {
     margin: 0 auto;
 }
 
-p {
+p, .second-menu-item {
     line-height: 1.4;
     font-size: 16px;
 }
@@ -17,12 +17,12 @@ h1 {
     font-size: 20px;
 }
 
-h2, .menu-button, .menu-item, .second-menu-item {
+h2, .menu-button, .menu-item {
     font-size: 20px;
 }
 
 nav {
-    height: 70px;
+    height: 75px;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     justify-content: space-between;
@@ -37,13 +37,9 @@ a, .flex, .menu-item, .second-menu-item, .header-text, .fruits-images {
     display: flex;
 }
 
-nav {
-    width: 100%;
-}
-
 .small-nav {
     transition: 0.6s;
-    height: 50px;
+    height: 55px;
 }
 
 .menu-list > a, .second-menu-list > a {
@@ -151,43 +147,40 @@ h1, h2, p, #contact {
     position: relative;
 }
 
-.first-line, .second-line, .third-line, .fourth-line {
+.first-line, .second-line {
     width: 10%;
+    right: 50%;
+    position: absolute;
+    transform: translateX(50%);
+    bottom: 20%;
+}
+
+.first-line {
+    bottom: 20%;
+}
+
+.second-line {
+    bottom: 18%;
+}
+
+.first-line:before, .first-line:after, .second-line:before, .second-line:after {
+    width: 100%;
     height: 4px;
     background-color: #dcd3b4;
     right: 50%;
     position: absolute;
+    content: ' ';
 }
 
-.first-line, .second-line {
-    bottom: 20%;
+.first-line:before, .second-line:before {
+    right: 50%;
+    transform: skewY(40deg)
 }
 
-.third-line, .fourth-line {
-    bottom: 19%;
+.first-line:after, .second-line:after {
+    left: 50%;
+    transform: skewY(-40deg)
 }
-
-.first-line, .third-line {
-    transform: skewY(40deg);
-}
-
-.second-line, .fourth-line {
-    transform: rotateX(180deg) translateX(100%) skewY(40deg);
-}
-
-/*.first-line {*/
-    /*bottom: 19%;*/
-/*}*/
-
-/*.first-line:before, .second-line:before {*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*background-color: #dcd3b4;*/
-    /*position: absolute;*/
-    /*transform: skewY(120deg) translateY(-50%);*/
-    /*right: 100%;*/
-    /*content: ' ';*/
-/*}*/
 
 .header-text {
     color: white;
@@ -437,15 +430,20 @@ input {
         width: auto;
         height: 100%;
         background: none;
+        padding-right: 20px;
     }
 
-    .menu-item {
+    a > img {
+        padding-left: 20px;
+    }
+
+    .menu-item, .second-menu-item {
         padding: 10px 10px;
         background: none;
         height: initial;
     }
 
-    .menu-item > a {
+    .menu-item > a, .second-menu-item > a {
         height: 100%;
     }
 
@@ -503,13 +501,11 @@ input {
     .second-menu-list > a {
         float: right;
         height: 30px;
-        padding: 15px;
     }
 
     .menu-list > a, .second-menu-list > a {
         height: 100%;
     }
-
 }
 
 @media (min-width: 690px) {
@@ -533,8 +529,8 @@ input {
         margin-right: 15px;
     }
 
-    .first-line, .second-line, .third-line, .fourth-line {
-        width: 10%;
+    .first-line, .second-line {
+        width: 56px;
     }
 
 }
