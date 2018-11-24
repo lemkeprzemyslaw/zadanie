@@ -148,7 +148,46 @@ h1, h2, p, #contact {
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
+    position: relative;
 }
+
+.first-line, .second-line, .third-line, .fourth-line {
+    width: 10%;
+    height: 4px;
+    background-color: #dcd3b4;
+    right: 50%;
+    position: absolute;
+}
+
+.first-line, .second-line {
+    bottom: 20%;
+}
+
+.third-line, .fourth-line {
+    bottom: 19%;
+}
+
+.first-line, .third-line {
+    transform: skewY(40deg);
+}
+
+.second-line, .fourth-line {
+    transform: rotateX(180deg) translateX(100%) skewY(40deg);
+}
+
+/*.first-line {*/
+    /*bottom: 19%;*/
+/*}*/
+
+/*.first-line:before, .second-line:before {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background-color: #dcd3b4;*/
+    /*position: absolute;*/
+    /*transform: skewY(120deg) translateY(-50%);*/
+    /*right: 100%;*/
+    /*content: ' ';*/
+/*}*/
 
 .header-text {
     color: white;
@@ -470,6 +509,7 @@ input {
     .menu-list > a, .second-menu-list > a {
         height: 100%;
     }
+
 }
 
 @media (min-width: 690px) {
@@ -492,4 +532,9 @@ input {
     .first-gallery {
         margin-right: 15px;
     }
+
+    .first-line, .second-line, .third-line, .fourth-line {
+        width: 10%;
+    }
+
 }
