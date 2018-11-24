@@ -79,11 +79,6 @@ a {
     display: block;
 }
 
-.types {
-    color: #ffffff;
-    font-weight: bold;
-}
-
 .menu-icon {
     width: 20px;
     height: 3px;
@@ -160,15 +155,28 @@ h1, h2, p, #contact {
 }
 
 @keyframes slide {
-    0%   {bottom: 20%}
-    50% {bottom: 18%}
-    100%   {bottom: 20%}
+    0% {
+        bottom: 20%
+    }
+    50% {
+        bottom: 18%
+    }
+    100% {
+        bottom: 20%
+    }
 }
 
 @keyframes pulse {
-    0%   {background: #dcd3b4;}
-    50% {background: #fff6d4; box-shadow: 0 -3px 2px 2px #fff6d4;}
-    100%   {background: #dcd3b4;}
+    0% {
+        background: #dcd3b4;
+    }
+    50% {
+        background: #fff6d4;
+        box-shadow: 0 -3px 2px 2px #fff6d4;
+    }
+    100% {
+        background: #dcd3b4;
+    }
 }
 
 .arrow {
@@ -240,8 +248,23 @@ h1, h2, p, #contact {
     margin-right: 15px;
 }
 
+#types {
+    flex-wrap: wrap;
+}
 
+#types > h1 {
+    font-size: 16px;
+}
 
+.type-image, .type-description, #contact > div, .main-container {
+    width: 100%;
+}
+
+.type-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 table, tr, th, td {
     border: 1px solid #000000;
@@ -260,30 +283,8 @@ table {
     margin: 5px;
 }
 
-.fruits-gallery, .column, .header-text, .types {
+.fruits-gallery, .column, .header-text {
     flex-direction: column;
-}
-
-#types {
-    flex-wrap: wrap;
-}
-
-.type-image, .type-description, #contact > div, .main-container {
-    width: 100%;
-}
-
-.type-description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.wrap {
-    flex-wrap: wrap;
-}
-
-#types > h1 {
-    font-size: 16px;
 }
 
 .fruits-gallery > h3 {
@@ -318,12 +319,12 @@ footer {
     justify-content: space-between;
 }
 
-.flex-column {
+.footer-column {
     justify-content: center;
     flex-grow: 1
 }
 
-.footer-item>a {
+.footer-item > a {
     color: black;
     font-weight: lighter;
 }
@@ -342,18 +343,11 @@ footer {
     align-content: center;
 }
 
-
-
 .logo-container {
     padding: 15px 20px 15px 15px;
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-}
-
-.logo-container>img {
-    max-height: 80px;
-    margin: 0 auto;
 }
 
 input, label {
@@ -387,12 +381,6 @@ input {
     padding: 5px;
 }
 
-@media (max-width: 767px) {
-    #contact {
-        flex: 100%;
-    }
-}
-
 @media (min-width: 768px) and (max-width: 991px) {
     .main-container {
         max-width: 750px;
@@ -416,13 +404,11 @@ input {
         font-size: 40px;
     }
 
-    .fruits-gallery > h3
-    {
+    .fruits-gallery > h3 {
         font-size: 30px;
     }
 
-    .fruits-gallery > p
-    {
+    .fruits-gallery > p {
         font-size: 17px;
     }
 
@@ -493,13 +479,11 @@ input {
         font-size: 50px;
     }
 
-    .fruits-gallery > h3
-     {
+    .fruits-gallery > h3 {
         font-size: 30px;
     }
 
-    .fruits-gallery > p
-    {
+    .fruits-gallery > p {
         font-size: 17px;
     }
 
@@ -521,10 +505,6 @@ input {
         height: 30px;
     }
 
-    .menu-list > a, .second-menu-list > a {
-        height: 100%;
-    }
-
     .first-line, .second-line {
         width: 60px;
     }
@@ -533,6 +513,10 @@ input {
 @media (min-width: 690px) {
     .gallery-container {
         width: 50%;
+    }
+
+    .first-gallery {
+        margin-right: 15px;
     }
 
     #cherry, #apple {
@@ -545,10 +529,6 @@ input {
 
     #gallery {
         display: flex;
-    }
-
-    .first-gallery {
-        margin-right: 15px;
     }
 
     footer {
