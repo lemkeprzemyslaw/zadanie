@@ -33,7 +33,7 @@ nav {
     width: 100%;
 }
 
-a, .flex, .menu-item, .second-menu-item, .header-text, .fruits-images {
+a, .flex, .fruits-images {
     display: flex;
 }
 
@@ -42,17 +42,18 @@ a, .flex, .menu-item, .second-menu-item, .header-text, .fruits-images {
     height: 55px;
 }
 
+.logo {
+    height: 45px;
+    padding-left: 20px;
+}
+
 .menu-list > a, .second-menu-list > a {
     height: 45px;
 }
 
 .menu-button {
     font-weight: 800;
-    padding-right: 15px;
-}
-
-.menu-button:hover, .menu-item:hover {
-    cursor: pointer;
+    padding-right: 20px;
 }
 
 a {
@@ -119,24 +120,10 @@ a {
 }
 
 a > img {
-    height: 45px;
-    padding-left: 10px;
 }
 
 h1, h2, p, #contact {
     padding: 15px;
-}
-
-.header-text {
-    text-shadow: 1px 1px #000000;
-}
-
-.header-text > h1 {
-    font-size: 35px;
-}
-
-.main-container {
-    width: 100%;
 }
 
 .header {
@@ -145,6 +132,18 @@ h1, h2, p, #contact {
     background-attachment: fixed;
     height: 100vh;
     position: relative;
+}
+
+.header-text > h1 {
+    font-size: 35px;
+}
+
+.header-text {
+    color: white;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px #000000;
 }
 
 .first-line, .second-line {
@@ -165,7 +164,7 @@ h1, h2, p, #contact {
 
 @keyframes slide {
     0%   {bottom: 20%}
-    50% {bottom: 15%}
+    50% {bottom: 18%}
     100%   {bottom: 20%}
 }
 
@@ -207,12 +206,7 @@ h1, h2, p, #contact {
     transform: skewY(-40deg)
 }
 
-.header-text {
-    color: white;
-    height: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.2);
-}
+
 
 .fruits-images > div, .fruits-gallery {
     width: 50%;
@@ -267,7 +261,7 @@ table {
     flex-wrap: wrap;
 }
 
-.type-image, .type-description {
+.type-image, .type-description, #contact > div, .main-container {
     width: 100%;
 }
 
@@ -343,10 +337,6 @@ footer {
     flex-grow: 2;
     flex-wrap: wrap;
     align-content: center;
-}
-
-#contact > div {
-    width: 100%;
 }
 
 #about {
@@ -471,10 +461,6 @@ input {
         padding-right: 20px;
     }
 
-    a > img {
-        padding-left: 20px;
-    }
-
     .menu-item, .second-menu-item {
         padding: 10px 10px;
         background: none;
@@ -497,12 +483,6 @@ input {
     p {
         line-height: 1.6;
         font-size: 20px;
-    }
-
-    .type-description {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
 
     .header-text > h1 {
