@@ -148,19 +148,39 @@ h1, h2, p, #contact {
 }
 
 .first-line, .second-line {
-    width: 10%;
+    width: 30px;
     right: 50%;
     position: absolute;
     transform: translateX(50%);
     bottom: 20%;
 }
 
-.first-line {
+.arrow {
+    position: absolute;
+    right: 50%;
     bottom: 20%;
+    animation: slide 2s infinite;
+    height: 50px;
+}
+
+@keyframes slide {
+    0%   {bottom: 20%}
+    50% {bottom: 15%}
+    100%   {bottom: 20%}
+}
+
+@keyframes pulse {
+    0%   {background: #dcd3b4;}
+    50% {background: #fff6d4; box-shadow: 0px 0px 2px 2px #fff6d4;}
+    100%   {background: #dcd3b4;}
+}
+
+.first-line {
+    bottom: 30%;
 }
 
 .second-line {
-    bottom: 18%;
+    bottom: 10%;
 }
 
 .first-line:before, .first-line:after, .second-line:before, .second-line:after {
@@ -170,6 +190,11 @@ h1, h2, p, #contact {
     right: 50%;
     position: absolute;
     content: ' ';
+    animation: pulse 2s infinite
+}
+
+.second-line:before, .second-line:after {
+    animation-delay: 0.5s;
 }
 
 .first-line:before, .second-line:before {
@@ -332,6 +357,7 @@ footer {
 .logo-container {
     padding: 15px 20px 15px 15px;
     align-items: center;
+    justify-content: center;
     flex-grow: 1;
 }
 
@@ -362,6 +388,10 @@ input {
     text-decoration: none;
 }
 
+.footer-logo {
+    height: 100px
+}
+
 .copyright {
     width: 100%;
     padding: 5px;
@@ -376,6 +406,10 @@ input {
 @media (min-width: 768px) and (max-width: 991px) {
     .main-container {
         max-width: 750px;
+    }
+
+    .first-line, .second-line {
+        width: 40px;
     }
 }
 
@@ -409,6 +443,10 @@ input {
 
     h1 {
         font-size: 35px;
+    }
+
+    .first-line, .second-line {
+        width: 50px;
     }
 }
 
@@ -506,6 +544,10 @@ input {
     .menu-list > a, .second-menu-list > a {
         height: 100%;
     }
+
+    .first-line, .second-line {
+        width: 60px;
+    }
 }
 
 @media (min-width: 690px) {
@@ -529,8 +571,7 @@ input {
         margin-right: 15px;
     }
 
-    .first-line, .second-line {
-        width: 56px;
+    footer {
+        font-size: 20px;
     }
-
 }
